@@ -1,11 +1,9 @@
 
 import 'package:app_project/Screens/Home/Home_Screen.dart';
 import 'package:app_project/Utils/device/helper_function.dart';
-import 'package:app_project/common/Images/sImages.dart';
 import 'package:app_project/common/widget/appbar/appBar.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:get_storage/get_storage.dart';
 import '../../../Data/Controller/product/Images_controller.dart';
 import '../../../Data/Models/Product_Model.dart';
 import '../../../common/widget/custom_shapes/curved_edges/curved_edges_widget.dart';

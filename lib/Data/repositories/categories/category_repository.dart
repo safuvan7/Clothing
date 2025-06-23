@@ -36,7 +36,7 @@ class CategoryRepository extends GetxController{
     try {
 
     //   upload all the categories along with their image
-      final storage = Get.put(sFirebaseStorageService());
+      final storage = Get.put(SFirebaseStorageService());
 
     //   loop through each category
       for(var category in categories){

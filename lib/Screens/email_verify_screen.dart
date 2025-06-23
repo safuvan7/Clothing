@@ -1,8 +1,5 @@
 import 'package:app_project/Data/Controller/email_verify_controller.dart';
 import 'package:app_project/Data/repositories/authentication/authentication_repository.dart';
-import 'package:app_project/Screens/Login_pg.dart';
-import 'package:app_project/Screens/success_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

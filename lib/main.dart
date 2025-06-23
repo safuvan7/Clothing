@@ -1,9 +1,6 @@
 import 'package:app_project/Bindings/general_bindings.dart';
-
 import 'package:app_project/Data/repositories/authentication/authentication_repository.dart';
-
 import 'package:app_project/Routes/app_routes.dart';
-
 import 'package:app_project/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -13,13 +10,9 @@ import 'package:get_storage/get_storage.dart';
 
 
 Future<void> main() async {
-  final WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-
+  WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
-
-  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.web).then(
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform).then(
       (FirebaseApp value) => Get.put(AuthenticationRepository()),
   );
 

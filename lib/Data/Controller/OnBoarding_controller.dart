@@ -1,6 +1,5 @@
 import 'package:app_project/Screens/Login_pg.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
@@ -23,7 +22,7 @@ class OnBoardingController extends GetxController {
 
       storage.write('IsFirstTime', false);
 
-      Get.offAll(LoginScreen());
+      Get.offAll(() => LoginScreen());
     } else {
       int page = currentPageIndex.value + 1;
       pageController.jumpToPage(page);

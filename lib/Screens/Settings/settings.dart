@@ -17,7 +17,6 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = UserController.instance;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(

@@ -1,8 +1,7 @@
 import 'package:app_project/Data/Controller/brand_controller.dart';
-import 'package:app_project/Data/Models/Brand_Model.dart';
+
 import 'package:app_project/Screens/Brands/brand_product.dart';
-import 'package:app_project/Screens/Home/Home_Screen.dart';
-import 'package:app_project/Screens/all_Products/View_products.dart';
+
 import 'package:app_project/Screens/store/Store_Screen.dart';
 import 'package:app_project/common/widget/texts/section_heading.dart';
 import 'package:flutter/material.dart';

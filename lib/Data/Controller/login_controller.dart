@@ -13,8 +13,8 @@ class loginController extends GetxController {
   final localStorage = GetStorage();
   final rememberME = false.obs;
   final showPassword = true.obs;
-  final email = TextEditingController();
-  final password = TextEditingController();
+  final TextEditingController email = TextEditingController();
+  final TextEditingController password = TextEditingController();
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
 
 
@@ -38,6 +38,7 @@ class loginController extends GetxController {
       }
 
       // form validation
+
       if (!loginFormKey.currentState!.validate()) {
         FullScreenLoader.stopLoading();
         return;

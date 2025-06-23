@@ -5,15 +5,14 @@ import 'package:app_project/Utils/Helper/network_manager.dart';
 import 'package:app_project/Utils/popups/fullscreen_loader.dart';
 import 'package:app_project/Utils/popups/loaders.dart';
 import 'package:app_project/common/Images/sImages.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class UpdateNameController extends GetxController {
   static UpdateNameController get instance  => Get.find();
 
-  final firstName = TextEditingController();
-  final lastName = TextEditingController();
+  final TextEditingController  firstName = TextEditingController();
+  final TextEditingController lastName = TextEditingController();
   final userController = UserController.instance;
   final userRepository = Get.put(UserRepository());
   GlobalKey<FormState> updateNameFormKey = GlobalKey<FormState>();

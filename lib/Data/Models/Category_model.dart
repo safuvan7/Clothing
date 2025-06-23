@@ -16,7 +16,7 @@ class CategoryModel {
     required this.image,
   });
 
-//   Empty Helpr Function
+//   Empty Helper Function
 static CategoryModel empty() => CategoryModel(id: '', name: '', isFeatured: false, image: '');
 
 

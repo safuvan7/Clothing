@@ -2,7 +2,6 @@ import 'package:app_project/Data/Controller/product/variation_controller.dart';
 import 'package:app_project/Data/Models/Product_Model.dart';
 import 'package:app_project/Screens/Home/Home_Screen.dart';
 import 'package:app_project/common/widget/choice/choice_chip.dart';
-import 'package:app_project/common/widget/custom_shapes/container/circular_container.dart';
 import 'package:app_project/common/widget/texts/section_heading.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

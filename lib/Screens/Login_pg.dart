@@ -1,7 +1,5 @@
 
 import 'package:app_project/Data/Controller/login_controller.dart';
-import 'package:app_project/Screens/Bottom_Navigation_Screen.dart';
-import 'package:app_project/Screens/Home/Home_Screen.dart';
 import 'package:app_project/Screens/SignUp_screen.dart';
 import 'package:app_project/Screens/forgot_password.dart';
 import 'package:flutter/material.dart';
@@ -44,9 +42,6 @@ class LoginScreen extends StatelessWidget {
                       }
                       return null;
                     },
-                    // onSaved: (mail){
-                    //   email = mail;
-                    // },
                   ),
                   SizedBox(height: 15,),
 
@@ -71,9 +66,6 @@ class LoginScreen extends StatelessWidget {
                         }
                         return null;
                       },
-                      // onSaved: (pass){
-                      //   password = pass;
-                      // },
                     ),
                   ),
                   SizedBox(height: 10,),
@@ -150,19 +142,6 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  // SizedBox(height: 30,),
-                  // Text("Or Connect With"),
-                  // SizedBox(height: 15,),
-                  // IconButton(onPressed: () async {
-                  //   var result = await authController.signInWithGoogle();
-                  //   if (result != null){
-                  //     Get.to(HomeScreen());
-                  //   }
-                  // },
-                  //     icon: Image.asset(
-                  //       "Assets/Images/googleimg.png",
-                  //       width: 30,height: 30,
-                  //     )),
                 ],
               ),),
             ],

@@ -1,16 +1,12 @@
 import 'package:app_project/Screens/Bottom_Navigation_Screen.dart';
 import 'package:app_project/Screens/email_verify_screen.dart';
-import 'package:app_project/Screens/forgot_password.dart';
 import 'package:app_project/Screens/Login_pg.dart';
 import 'package:app_project/Screens/Onboarding_screen.dart';
 import 'package:app_project/Utils/Exception/firebase_auth_exception.dart';
 import 'package:app_project/Utils/Exception/firebase_exception.dart';
 import 'package:app_project/Utils/Exception/platform_Exception.dart';
-import 'package:app_project/Utils/device/storage_utility.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
@@ -24,7 +20,7 @@ class AuthenticationRepository extends GetxController {
 
   @override
   void onReady() {
-    FlutterNativeSplash.remove();
+    // FlutterNativeSplash.remove();
     screenRedirect();
   }
 

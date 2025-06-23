@@ -18,13 +18,13 @@ class SignUpController extends GetxController{
   final FirebaseAuth auth = FirebaseAuth.instance;
 
   final showPassword = true.obs;
-  final firstName = TextEditingController();
-  final lastName = TextEditingController();
-  final phone = TextEditingController();
-  final email = TextEditingController();
-  final password = TextEditingController();
-  final confirm = TextEditingController();
-  final username = TextEditingController();
+  final TextEditingController firstName = TextEditingController();
+  final TextEditingController lastName = TextEditingController();
+  final TextEditingController phone = TextEditingController();
+  final TextEditingController email = TextEditingController();
+  final TextEditingController password = TextEditingController();
+  final TextEditingController confirm = TextEditingController();
+  final TextEditingController username = TextEditingController();
   GlobalKey<FormState> signUpFormKey = GlobalKey<FormState>();
 
   // void phoneAuthentication(String phoneNo) async{

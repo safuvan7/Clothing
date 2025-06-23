@@ -4,7 +4,6 @@ import 'package:app_project/Data/Models/Brand_Model.dart';
 import 'package:app_project/Screens/Brands/all_brands.dart';
 import 'package:app_project/Screens/Brands/brand_product.dart';
 import 'package:app_project/Screens/Home/Home_Screen.dart';
-import 'package:app_project/Screens/Home/Widget/home_Slider.dart';
 import 'package:app_project/Screens/store/widget/category_tab.dart';
 import 'package:app_project/Utils/device/helper_function.dart';
 import 'package:app_project/common/widget/Shimmer/brand_shimmer.dart';

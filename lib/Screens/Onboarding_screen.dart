@@ -1,18 +1,14 @@
 
 
 import 'package:app_project/Data/Controller/OnBoarding_controller.dart';
-import 'package:app_project/Screens/Home/Home_Screen.dart';
-import 'package:app_project/Screens/Login_pg.dart';
 import 'package:app_project/Utils/device/device_utility.dart';
 import 'package:app_project/common/Images/sImages.dart';
 import 'package:flutter/material.dart';
-import 'package:introduction_screen/introduction_screen.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingScreen extends StatelessWidget {
-  OnboardingScreen({super.key});
-
+  const OnboardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

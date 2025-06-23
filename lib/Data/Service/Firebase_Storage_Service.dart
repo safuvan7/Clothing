@@ -1,13 +1,13 @@
 import 'dart:io';
-import 'dart:typed_data';
+
 
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
-class sFirebaseStorageService extends GetxController {
-  static sFirebaseStorageService get instance => Get.find();
+class SFirebaseStorageService extends GetxController {
+  static SFirebaseStorageService get instance => Get.find();
 
   final _firebaseStorage = FirebaseStorage.instance;
 

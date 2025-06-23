@@ -1,24 +1,16 @@
-
-import 'package:app_project/common/Images/sImages.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:app_project/Screens/all_Products/View_products.dart';
 import 'package:app_project/Screens/product_details/product_detail.dart';
-import 'package:app_project/Utils/device/device_utility.dart';
 import 'package:app_project/Utils/device/helper_function.dart';
 import 'package:app_project/common/enum/enums.dart';
 import 'package:app_project/common/widget/Shimmer/vertical_product_shimmer.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../Data/Controller/product/favourite_controller.dart';
 import '../../Data/Controller/product/product_controller.dart';
 import '../../Data/Models/Product_Model.dart';
-import '../../common/widget/appbar/appBar.dart';
 import '../../common/widget/custom_shapes/container/pimary_header_container.dart';
 import '../../common/widget/custom_shapes/container/search_container.dart';
-import '../../common/widget/products.cart/cart_menu_icon.dart';
 import '../../common/widget/texts/section_heading.dart';
-import '../cart/Cart_Screen.dart';
 import 'Widget/Home_AppBar.dart';
 import 'Widget/grid_layout.dart';
 import 'Widget/home_Slider.dart';
@@ -33,9 +25,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    final dark = sHelperFunction.isDarkMode(context);
-
     final controller = Get.put(ProductController());
     return Scaffold(
       body: SingleChildScrollView(

@@ -1,15 +1,9 @@
 
 import 'package:app_project/Data/Controller/signUp_controller.dart';
-import 'package:app_project/Screens/Login_pg.dart';
-import 'package:app_project/Screens/email_verify_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-
-// void main(){
-//   runApp(MaterialApp(home: SignupScreen(),));
-// }
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});

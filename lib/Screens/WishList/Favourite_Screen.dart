@@ -9,13 +9,10 @@ import 'package:app_project/common/widget/Shimmer/vertical_product_shimmer.dart'
 import 'package:app_project/common/widget/appbar/appBar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../Data/Models/Product_Model.dart';
 import '../Home/Widget/grid_layout.dart';
 
 class FavouriteScreen extends StatelessWidget {
   const FavouriteScreen({super.key});
-
 
 
   @override

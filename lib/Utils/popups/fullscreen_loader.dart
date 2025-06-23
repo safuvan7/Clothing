@@ -2,7 +2,6 @@ import 'package:app_project/Utils/device/helper_function.dart';
 import 'package:app_project/Utils/popups/animation_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:path/path.dart';
 
 class FullScreenLoader {
   static void openDialog(String text, String animation) {

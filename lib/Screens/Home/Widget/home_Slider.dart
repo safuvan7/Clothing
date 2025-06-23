@@ -1,6 +1,5 @@
 
-import 'package:app_project/Data/Controller/Home_controller.dart';
-import 'package:app_project/Utils/device/helper_function.dart';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,7 +20,6 @@ class sHomeSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = sHelperFunction.isDarkMode(context);
     final controller = Get.put(BannerController());
             return Obx(
                 (){

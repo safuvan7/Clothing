@@ -1,7 +1,6 @@
 import 'package:app_project/Data/Models/user_model.dart';
 import 'package:app_project/Data/repositories/User/user_repository.dart';
 import 'package:app_project/Utils/popups/loaders.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -12,8 +11,8 @@ class UserController extends GetxController {
   final profileLoading = false.obs;
   Rx<UserModel> user = UserModel.empty().obs;
   final showPassword = false.obs;
-  final verifyEmail = TextEditingController();
-  final verifyPassword = TextEditingController();
+  final TextEditingController verifyEmail = TextEditingController();
+  final TextEditingController verifyPassword = TextEditingController();
   final userRepository = Get.put(UserRepository());
   GlobalKey<FormState> reAuthForKey = GlobalKey<FormState>();
 

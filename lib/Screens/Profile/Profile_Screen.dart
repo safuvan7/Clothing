@@ -1,16 +1,13 @@
 import 'package:app_project/Data/Controller/user_controller.dart';
-import 'package:app_project/Data/Models/user_model.dart';
 import 'package:app_project/Screens/Profile/widgets/Change_Name.dart';
 import 'package:app_project/Screens/store/Store_Screen.dart';
 import 'package:app_project/common/widget/appbar/appBar.dart';
 import 'package:app_project/common/widget/texts/section_heading.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
-
 
 
   @override

@@ -6,7 +6,6 @@ import 'package:app_project/common/widget/Shimmer/Boxes_Shimmer.dart';
 import 'package:app_project/common/widget/Shimmer/listTile_shimmer.dart';
 import 'package:flutter/material.dart';
 
-import '../../../common/Images/sImages.dart';
 
 class CategoryBrands extends StatelessWidget {
   const CategoryBrands({super.key, required this.category});

@@ -5,15 +5,12 @@ import 'package:app_project/Screens/Home/Home_Screen.dart';
 import 'package:app_project/Screens/all_Products/View_products.dart';
 import 'package:app_project/Screens/store/widget/category_brands.dart';
 import 'package:app_project/Utils/device/cloud_helpr_Function.dart';
-import 'package:app_project/common/Images/sImages.dart';
 import 'package:app_project/common/widget/Shimmer/vertical_product_shimmer.dart';
 import 'package:app_project/common/widget/texts/section_heading.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../../Data/Models/Product_Model.dart';
 import '../../Home/Widget/grid_layout.dart';
-import '../Store_Screen.dart';
+
 
 class CategoryTab extends StatelessWidget {
   const CategoryTab({super.key, required this.category});

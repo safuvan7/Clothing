@@ -1,7 +1,6 @@
 
 import 'package:app_project/Screens/product_details/Widget/product_attributes.dart';
 import 'package:app_project/Screens/product_details/Widget/product_data.dart';
-import 'package:app_project/common/enum/enums.dart';
 import 'package:app_project/common/widget/texts/section_heading.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';

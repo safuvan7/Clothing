@@ -6,7 +6,6 @@ import 'package:app_project/Utils/Exception/firebase_exception.dart';
 import 'package:app_project/Utils/Exception/platform_Exception.dart';
 import 'package:app_project/common/enum/enums.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
@@ -120,7 +119,7 @@ class ProductRepository extends GetxController {
    Future<void> uploadDummyData(List<ProductModel> products) async {
      try {
      //   upload all the products along with their images
-       final storage = Get.put(sFirebaseStorageService());
+       final storage = Get.put(SFirebaseStorageService());
 
      //   loop through each product
        for (var product in products) {

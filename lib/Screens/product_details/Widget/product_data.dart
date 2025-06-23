@@ -2,7 +2,6 @@ import 'package:app_project/Data/Controller/product/product_controller.dart';
 import 'package:app_project/Data/Models/Product_Model.dart';
 import 'package:app_project/Screens/Home/Home_Screen.dart';
 import 'package:app_project/Screens/store/Store_Screen.dart';
-import 'package:app_project/Utils/device/helper_function.dart';
 import 'package:app_project/common/enum/enums.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +14,6 @@ class sProductData extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = ProductController.instance;
     final salePercentage = controller.calculateSalePercentage(product.price, product.salePrice);
-    final dark = sHelperFunction.isDarkMode(context);
      return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
