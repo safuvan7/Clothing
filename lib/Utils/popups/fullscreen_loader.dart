@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:path/path.dart';
 
 class FullScreenLoader {
-  static void openDialog(String text, String image) {
+  static void openDialog(String text, String animation) {
     showDialog(
         context: Get.overlayContext!,
         barrierDismissible: false,
@@ -18,7 +18,7 @@ class FullScreenLoader {
               child: Column(
                 children: [
                   SizedBox(height: 250,),
-                  SImageLoaderWidget(text: text, image: image),
+                  SImageLoaderWidget(text: text, image: animation),
                 ],
               ),
             ))

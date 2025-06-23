@@ -1,7 +1,6 @@
 
 import 'package:app_project/Data/Controller/login_controller.dart';
 import 'package:app_project/Screens/Bottom_Navigation_Screen.dart';
-
 import 'package:app_project/Screens/Home/Home_Screen.dart';
 import 'package:app_project/Screens/SignUp_screen.dart';
 import 'package:app_project/Screens/forgot_password.dart';

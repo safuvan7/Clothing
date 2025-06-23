@@ -137,7 +137,7 @@ class UserProfile extends StatelessWidget {
             // height: 50,
             padding: 0,
           ),
-          title: Text(controller.user.value.username,style: Theme.of(context).textTheme.headlineSmall!.apply(color: Colors.white),),
+          title: Text(controller.user.value.fullName,style: Theme.of(context).textTheme.headlineSmall!.apply(color: Colors.white),),
           subtitle: Text(controller.user.value.email,style: Theme.of(context).textTheme.headlineSmall!.apply(color: Colors.white),),
           trailing: IconButton(
               onPressed: onPressed,

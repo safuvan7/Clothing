@@ -17,16 +17,16 @@ class SImageLoaderWidget extends StatelessWidget {
   const SImageLoaderWidget({
     super.key,
     required this.text,
-    required this.image,
-    // required this.animation,
+    this.image,
+    this.animation,
     this.showAction = false,
     this.actionText,
     this.onActionPressed,
   });
 
   final String text;
-  final String image;
-  // final String animation;
+  final String? image;
+  final String? animation;
   final bool showAction;
   final String? actionText;
   final VoidCallback? onActionPressed;
@@ -37,8 +37,8 @@ class SImageLoaderWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(image,width: MediaQuery.of(context).size.width * 0.8,),
-          // Lottie.asset(animation, width: MediaQuery.of(context).size.width * 0.8), // Display Lottie animation
+          Image.asset(image!,width: MediaQuery.of(context).size.width * 0.8,),
+          Lottie.asset(animation!, width: MediaQuery.of(context).size.width * 0.8), // Display Lottie animation
           const SizedBox(height: 24),
           Text(
             text,

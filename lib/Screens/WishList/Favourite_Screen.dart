@@ -13,17 +13,14 @@ import 'package:get/get.dart';
 import '../../Data/Models/Product_Model.dart';
 import '../Home/Widget/grid_layout.dart';
 
-class FavouriteScreen extends StatefulWidget {
+class FavouriteScreen extends StatelessWidget {
   const FavouriteScreen({super.key});
 
-  @override
-  State<FavouriteScreen> createState() => _FavouriteScreenState();
-}
 
-class _FavouriteScreenState extends State<FavouriteScreen> {
-  final controller = FavouritesController.instance;
+
   @override
   Widget build(BuildContext context) {
+    final controller = FavouritesController.instance;
     return Scaffold(
       appBar: TAppBar(
         title:  Text(

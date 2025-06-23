@@ -1,22 +1,21 @@
 import 'package:app_project/Data/Controller/user_controller.dart';
 import 'package:app_project/Data/Models/user_model.dart';
+import 'package:app_project/Screens/Profile/widgets/Change_Name.dart';
 import 'package:app_project/Screens/store/Store_Screen.dart';
 import 'package:app_project/common/widget/appbar/appBar.dart';
 import 'package:app_project/common/widget/texts/section_heading.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-class ProfileScreen extends StatefulWidget {
+class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
-  @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
-}
 
-class _ProfileScreenState extends State<ProfileScreen> {
-  final controller = UserController.instance;
+
   @override
   Widget build(BuildContext context) {
+    final controller = UserController.instance;
     return Scaffold(
       appBar: TAppBar(
         showBackArrow: true,
@@ -28,16 +27,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               fontSize: 25
           ),),
       ),
-      body: FutureBuilder(
-        future: controller.getUserData(),
-        builder: (context, snapshot){
-          if (snapshot.connectionState == ConnectionState.waiting)
-            return Center(child: CircularProgressIndicator(),);
-          if (!snapshot.hasData || snapshot.data == null)
-            return Center(child: Text('No user Data Found!'),);
-
-          final user = snapshot.data!;
-          return SingleChildScrollView(
+      body: SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.all(24),
               child: Column(
@@ -50,7 +40,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             height: 80,
                             width: 80,
                             image: 'Assets/Images/profile.png'),
-                        TextButton(onPressed: (){}, child: Text('Change Profile'))
+                        TextButton(
+                            onPressed: (){},
+                            child: Text('Change Profile'))
                       ],
                     ),
                   ),
@@ -63,14 +55,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   SizedBox(height: 16,),
                   Profile_menu(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => ChangeName()),
                     title: 'Name',
-                    value: user.username,
+                    value: controller.user.value.fullName,
                   ),
                   Profile_menu(
                     onPressed: () {},
                     title: 'Username',
-                    value: user.username,
+                    value: controller.user.value.username,
                   ),
 
                   SizedBox(height: 16 / 2,),
@@ -86,17 +78,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     icon: Icons.copy,
                     onPressed: () {},
                     title: 'User ID',
-                    value: user.id,
+                    value: controller.user.value.id,
                   ),
                   Profile_menu(
                     onPressed: () {},
                     title: 'E-mail',
-                    value: user.email,
+                    value: controller.user.value.email,
                   ),
                   Profile_menu(
                     onPressed: () {},
                     title: 'Phone Number',
-                    value: user.phone,
+                    value: controller.user.value.phone,
                   ),
                   Profile_menu(
                     onPressed: () {},
@@ -122,19 +114,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   )
                 ],
               ),),
-          );
-        },
-
-
-
-      ),
-
+          )
     );
   }
 }
-
-
-
 
 class Profile_menu extends StatelessWidget {
   const Profile_menu({

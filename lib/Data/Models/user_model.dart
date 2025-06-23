@@ -8,8 +8,8 @@ class UserModel {
   final String username;
   final String email;
   String phone;
-  final String password;
-  final DateTime createdAt;
+  final String? password;
+  final DateTime? createdAt;
 
   // constructor for user model
   UserModel({
@@ -19,8 +19,8 @@ class UserModel {
     required this.username,
     required this.email,
     required this.phone,
-    required this.password,
-    required this.createdAt
+    this.password,
+    this.createdAt
   });
 
   // helper function to get the full name
@@ -54,6 +54,20 @@ class UserModel {
       createdAt: DateTime.now(),
   );
 
+
+  // Convert model to json structure for string data in firebase
+  Map<String, dynamic> toJson() {
+    return {
+      'Username': username,
+      'Email': email,
+      'Phone': phone,
+      'Password': password,
+      'Firstname' : firstname,
+      'Lastname' : lastname,
+      'CreatedAt' : Timestamp.fromDate(createdAt!),
+    };
+  }
+
   // factory method to create a UserModel from a firebase document snapshot.
   factory UserModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> doc) {
     if (doc.data() != null){
@@ -74,16 +88,4 @@ class UserModel {
     }
   }
 
-  // Convert model to json structure for string data in firebase
-  Map<String, dynamic> toJson() {
-    return {
-      'Username': username,
-      'Email': email,
-      'Phone': phone,
-      'Password': password,
-      'Firstname' : firstname,
-      'Lastname' : lastname,
-      'CreatedAt' : Timestamp.fromDate(createdAt),
-    };
-  }
 }
